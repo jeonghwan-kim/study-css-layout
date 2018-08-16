@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body, html, ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .cards {
+      border: solid 1px blue;
+      display: grid;
+      grid-template-columns: repeat(4, 15%);
+      grid-template-rows: repeat(3, 100px);
+      height: 50;
+      grid-template-areas:
+        "a a a b"
+        "a a a b"
+        "c d d d";
+        grid-gap: 20px;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    li {
+      background-color: lightpink;
+      border: solid 1px darkred;
+      flex: 1 1 100px;
+    }
+    .cards li:nth-child(1) {
+      grid-area: a;
+    }
+    .cards li:nth-child(2) {
+      grid-area: b;
+    }
+    .cards li:nth-child(3) {
+      grid-area: c;
+    }
+    .cards li:nth-child(4) {
+      grid-area: d;
+    }
+  </style>
+</head>
+<body>
+  <ul class="cards">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+</body>
+</html>
